@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillShare PWA Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            400: '#B497BD',
+                            500: '#9a7ba8',
+                        },
+                        secondary: {
+                            400: '#64C7B8',
+                            500: '#14b8a6',
+                        },
+                        accent: {
+                            400: '#E6C07B',
+                            500: '#f59e0b',
+                        },
+                        dark: {
+                            900: '#0b0b0b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #B497BD, #64C7B8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card {
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .card-hover {
+            transition: all 0.2s;
+        }
+        .card-hover:hover {
+            border-color: #4b5563;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-900 border-b border-gray-700">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-primary-400 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-xl font-bold gradient-text">SkillShare</h1>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="px-4 py-2 text-gray-400 hover:text-gray-200 transition-colors">
+                        Sign In
+                    </button>
+                    <button class="px-4 py-2 bg-primary-400 text-white rounded-lg hover:bg-primary-500 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold gradient-text mb-6">
+                Learn Together,<br />
+                Grow Together
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Connect with peers to exchange skills, share knowledge, and build meaningful learning relationships in a supportive community.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="px-8 py-4 bg-primary-400 text-white rounded-lg hover:bg-primary-500 transition-colors flex items-center justify-center">
+                    Start Learning
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </button>
+                <button class="px-8 py-4 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 px-4 bg-gray-800/50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-200 mb-4">
+                    Why Choose SkillShare?
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Our platform makes skill exchange simple, effective, and enjoyable for everyone.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card card-hover text-center">
+                    <div class="w-12 h-12 bg-primary-400/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-200 mb-2">
+                        Find Your Perfect Match
+                    </h3>
+                    <p class="text-gray-400">
+                        Connect with peers who have the skills you want to learn and can teach what you know.
+                    </p>
+                </div>
+
+                <div class="card card-hover text-center">
+                    <div class="w-12 h-12 bg-secondary-400/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-secondary-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-200 mb-2">
+                        Schedule Learning Sessions
+                    </h3>
+                    <p class="text-gray-400">
+                        Book one-on-one or group sessions at times that work for both of you.
+                    </p>
+                </div>
+
+                <div class="card card-hover text-center">
+                    <div class="w-12 h-12 bg-accent-400/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-200 mb-2">
+                        Real-time Communication
+                    </h3>
+                    <p class="text-gray-400">
+                        Chat with your learning partners and get instant feedback on your progress.
+                    </p>
+                </div>
+
+                <div class="card card-hover text-center">
+                    <div class="w-12 h-12 bg-accent-400/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-200 mb-2">
+                        Build Your Reputation
+                    </h3>
+                    <p class="text-gray-400">
+                        Earn ratings and reviews as you teach and learn, building trust in the community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">
+                        10K+
+                    </div>
+                    <div class="text-gray-400">
+                        Active Learners
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">
+                        500+
+                    </div>
+                    <div class="text-gray-400">
+                        Skills Available
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">
+                        50K+
+                    </div>
+                    <div class="text-gray-400">
+                        Sessions Completed
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">
+                        4.8
+                    </div>
+                    <div class="text-gray-400">
+                        Average Rating
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Dashboard Section -->
+    <section class="py-20 px-4 bg-gray-800/50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-200 mb-4">
+                    Dashboard Preview
+                </h2>
+                <p class="text-lg text-gray-400">
+                    See what your learning dashboard looks like
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="card">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-primary-400/20 rounded-lg">
+                                <svg class="w-6 h-6 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-400">Total Matches</p>
+                                <p class="text-2xl font-bold text-gray-200">12</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-secondary-400/20 rounded-lg">
+                                <svg class="w-6 h-6 text-secondary-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-400">Upcoming Sessions</p>
+                                <p class="text-2xl font-bold text-gray-200">3</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-accent-400/20 rounded-lg">
+                                <svg class="w-6 h-6 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-400">Unread Messages</p>
+                                <p class="text-2xl font-bold text-gray-200">5</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-accent-400/20 rounded-lg">
+                                <svg class="w-6 h-6 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-400">Average Rating</p>
+                                <p class="text-2xl font-bold text-gray-200">4.8</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="card">
+                        <h3 class="text-xl font-semibold text-gray-200 mb-4">Recent Activity</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="p-2 bg-primary-400/20 rounded-lg">
+                                    <svg class="w-4 h-4 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-sm text-gray-200">New match found with Sarah Chen for Python programming</p>
+                                    <p class="text-xs text-gray-400">2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="p-2 bg-secondary-400/20 rounded-lg">
+                                    <svg class="w-4 h-4 text-secondary-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-sm text-gray-200">Session scheduled for tomorrow at 2:00 PM</p>
+                                    <p class="text-xs text-gray-400">4 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div class="p-2 bg-accent-400/20 rounded-lg">
+                                    <svg class="w-4 h-4 text-accent-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-sm text-gray-200">New message from Marcus Johnson</p>
+                                    <p class="text-xs text-gray-400">6 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="text-xl font-semibold text-gray-200 mb-4">Upcoming Sessions</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-3 border border-gray-700 rounded-lg">
+                                <div class="flex-1">
+                                    <h4 class="font-medium text-gray-200">Python Basics Session</h4>
+                                    <p class="text-sm text-gray-400">with Sarah Chen</p>
+                                    <p class="text-xs text-gray-500">Tomorrow, 2:00 PM</p>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="px-2 py-1 bg-primary-400/20 text-primary-300 text-xs rounded-full">online</span>
+                                    <span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">confirmed</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between p-3 border border-gray-700 rounded-lg">
+                                <div class="flex-1">
+                                    <h4 class="font-medium text-gray-200">React Hooks Workshop</h4>
+                                    <p class="text-sm text-gray-400">with Marcus Johnson</p>
+                                    <p class="text-xs text-gray-500">Friday, 10:00 AM</p>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="px-2 py-1 bg-secondary-400/20 text-secondary-300 text-xs rounded-full">in-person</span>
+                                    <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-200 mb-4">
+                Ready to Start Learning?
+            </h2>
+            <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+                Join thousands of students who are already exchanging skills and building their knowledge network.
+            </p>
+            <button class="px-8 py-4 bg-primary-400 text-white rounded-lg hover:bg-primary-500 transition-colors flex items-center justify-center mx-auto">
+                Join SkillShare Today
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-primary-400 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold gradient-text">SkillShare</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Connecting learners worldwide through peer-to-peer skill exchange.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-gray-200 mb-4">Platform</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Explore Skills</a></li>
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Find Matches</a></li>
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Book Sessions</a></li>
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Community Chat</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-gray-200 mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Safety Guidelines</a></li>
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Report Issue</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-gray-200 mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-200 transition-colors">Community Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 SkillShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add some interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to cards
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Add click handlers to buttons
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (this.textContent.includes('Get Started') || this.textContent.includes('Start Learning') || this.textContent.includes('Join SkillShare')) {
+                        alert('🎉 Welcome to SkillShare! This is a demo version. In the full app, you would be redirected to the registration page.');
+                    } else if (this.textContent.includes('Sign In')) {
+                        alert('🔐 Sign In clicked! In the full app, you would be redirected to the login page.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
