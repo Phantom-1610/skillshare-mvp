@@ -1,20 +1,9 @@
 /**
- * TEAM CONTRIBUTION #1 - BASE MATCHING SYSTEM
- * Contributor: [Your Name]
- * Features: Core app structure, authentication, user matching, discovery
- * 
- * This file contains the foundational code for SkillShare including:
- * - User authentication system
- * - User matching and discovery
- * - Core database models
- * - Basic UI framework
+ * Base matching system and user authentication
+ * Handles user registration, login, and finding people to connect with
  */
 
-// ============================================================================
-// AUTHENTICATION SYSTEM
-// ============================================================================
-
-// User Registration & Login (Backend)
+// User registration and login functions
 const registerUser = async (userData) => {
   const { firstName, lastName, email, password } = userData;
   
@@ -57,11 +46,7 @@ const loginUser = async (email, password) => {
   return { user: publicUser(user), token };
 };
 
-// ============================================================================
-// USER MATCHING SYSTEM
-// ============================================================================
-
-// Get all users for matching (Backend)
+// Finding and matching users based on skills
 const getAllUsers = async (currentUserId) => {
   const users = await User.find({ 
     _id: { $ne: currentUserId },
@@ -105,11 +90,7 @@ const findMatches = (currentUser, allUsers) => {
   });
 };
 
-// ============================================================================
-// DATABASE MODELS
-// ============================================================================
-
-// User Schema
+// Database structure for users
 const UserSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
@@ -137,11 +118,7 @@ const UserSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
-// ============================================================================
-// API ROUTES
-// ============================================================================
-
-// Registration endpoint
+// API endpoints for the app
 app.post('/api/auth/register', async (req, res) => {
   try {
     const result = await registerUser(req.body);
@@ -179,11 +156,7 @@ app.get('/api/users', auth, async (req, res) => {
   }
 });
 
-// ============================================================================
-// FRONTEND COMPONENTS
-// ============================================================================
-
-// Explore Page Component (React)
+// Frontend page for browsing users
 const ExplorePage = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -282,11 +255,7 @@ const ExplorePage = () => {
   );
 };
 
-// ============================================================================
-// UTILITY FUNCTIONS
-// ============================================================================
-
-// Remove sensitive data from user object
+// Helper functions
 const publicUser = (user) => {
   const { password, ...publicData } = user.toObject();
   return publicData;

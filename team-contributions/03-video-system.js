@@ -1,13 +1,6 @@
 /**
- * TEAM CONTRIBUTION #3 - VIDEO SYSTEM
- * Contributor: [Team Member 3]
- * Features: Video calls, session scheduling, Jitsi Meet integration
- * 
- * This file contains the video conferencing functionality including:
- * - Jitsi Meet integration for video calls
- * - Session scheduling and management
- * - Video call UI components
- * - Meeting room generation
+ * Video calling and session management
+ * Handles video calls and scheduling learning sessions
  */
 
 // ============================================================================

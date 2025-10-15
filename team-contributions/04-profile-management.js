@@ -1,13 +1,6 @@
 /**
- * TEAM CONTRIBUTION #4 - PROFILE MANAGEMENT
- * Contributor: [Team Member 4]
- * Features: Profile editing, file uploads, skill verification, customization
- * 
- * This file contains the profile management functionality including:
- * - User profile editing and customization
- * - File upload for avatars and verification documents
- * - Skill management (offered and desired)
- * - Profile viewing and reviews
+ * User profile management
+ * Handles profile editing, file uploads, and skill verification
  */
 
 // ============================================================================

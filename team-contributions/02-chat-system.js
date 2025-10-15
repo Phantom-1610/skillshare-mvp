@@ -1,13 +1,6 @@
 /**
- * TEAM CONTRIBUTION #2 - CHAT SYSTEM
- * Contributor: [Team Member 2]
- * Features: Real-time messaging, Socket.io integration, chat UI
- * 
- * This file contains the chat functionality including:
- * - Real-time messaging with Socket.io
- * - Message persistence in MongoDB
- * - Chat UI components
- * - Message threading and conversation management
+ * Real-time chat system
+ * Handles messaging between users with live updates
  */
 
 // ============================================================================

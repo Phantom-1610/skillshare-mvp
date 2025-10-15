@@ -1,13 +1,6 @@
 /**
- * TEAM CONTRIBUTION #5 - NOTIFICATIONS & POLISH
- * Contributor: [Team Member 5]
- * Features: Real-time notifications, UI/UX improvements, error handling, final integration
- * 
- * This file contains the notification system and final polish including:
- * - Real-time notifications with Socket.io
- * - Notification management and persistence
- * - UI/UX improvements and error handling
- * - Final integration and polish
+ * Notifications and app polish
+ * Handles real-time notifications and error handling
  */
 
 // ============================================================================
