@@ -200,23 +200,28 @@ If you're still having issues:
 3. Try restarting the app
 4. Check our GitHub issues page
 
-## 🤝 Contributing
+## 👥 Team Collaboration
 
-We welcome contributions! Here's how you can help:
+This project was developed by a team of 5 developers, each contributing specific features:
 
-1. **Fork** the repository
-2. **Create** a feature branch
-3. **Make** your changes
-4. **Test** thoroughly
-5. **Submit** a pull request
+### **Team Contributions:**
+- **Base System & Matching** - Core authentication, user discovery, and matching algorithm
+- **Chat System** - Real-time messaging with Socket.io integration
+- **Video System** - Video calls, session scheduling, and Jitsi Meet integration
+- **Profile Management** - User profiles, file uploads, and skill verification
+- **Notifications & Polish** - Real-time notifications, error handling, and UI improvements
 
-### Development Setup
+### **For Lecturers/Assessors:**
+This repository demonstrates collaborative development with clear separation of individual contributions. Each team member's work is documented in the `team-contributions/` folder, showing their specific features and implementations.
+
+### **Development Setup**
 
 1. Clone the repository
 2. Run `setup.bat` (Windows) or `./setup.sh` (Mac/Linux)
-3. Make your changes
-4. Test locally
-5. Submit a pull request
+3. The app will automatically install dependencies and start
+4. Open http://localhost:3000 to view the application
+
+**Note:** All team members worked on the same repository, with each person contributing their assigned features through separate commits and pull requests.
 
 ## 📄 License
 
