@@ -20,3 +20,5 @@ router.get('/:skillId', getSkill);
 
 export default router;
 
+
+
