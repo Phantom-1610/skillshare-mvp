@@ -66,13 +66,6 @@ const Header = ({ onMenuClick, user }) => {
           >
             <Menu className="w-5 h-5" />
           </button>
-          
-          {/* SkillShare Logo/Name */}
-          <div className="flex items-center">
-            <h1 className="text-xl font-bold text-white">
-              SkillShare
-            </h1>
-          </div>
         </div>
 
         {/* Right side */}
