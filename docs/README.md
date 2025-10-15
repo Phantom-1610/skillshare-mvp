@@ -29,7 +29,7 @@ Think of it as "Uber for skills" - but instead of rides, you're exchanging knowl
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/phan16tom-collab/skillshare-mvp.git
+   git clone https://github.com/Phantom-1610/skillshare-mvp.git
    cd skillshare-mvp
    ```
 
