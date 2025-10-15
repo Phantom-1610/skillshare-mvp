@@ -76,3 +76,4 @@ All demo users have the password: **`password123`**
 
 **Enjoy exploring SkillShare!** 🚀
 
+

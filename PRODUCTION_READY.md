@@ -401,3 +401,4 @@ cd skillshare
 **Access:** http://localhost:3000
 
 **Enjoy your complete SkillShare PWA!** 🎉
+

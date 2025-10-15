@@ -19,3 +19,4 @@ router.get('/categories', getSkillCategories);
 router.get('/:skillId', getSkill);
 
 export default router;
+

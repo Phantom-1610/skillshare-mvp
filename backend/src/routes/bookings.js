@@ -24,3 +24,4 @@ router.post('/:bookingId/cancel', cancelBooking);
 router.post('/:bookingId/confirm', confirmBooking);
 
 export default router;
+

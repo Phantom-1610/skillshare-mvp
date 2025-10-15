@@ -39,3 +39,4 @@ router.get('/sessions', validateQuery(querySchemas.pagination), getSessions);
 router.get('/messages', validateQuery(querySchemas.pagination), getMessages);
 
 export default router;
+

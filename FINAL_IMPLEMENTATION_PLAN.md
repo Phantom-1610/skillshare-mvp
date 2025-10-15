@@ -256,3 +256,4 @@ The app will be fully production-ready with:
 ---
 
 **I'll continue implementing the legal pages and other features that don't require MongoDB while you can set it up.**
+

@@ -1301,3 +1301,4 @@ For API support and questions:
 - **Support Email**: api-support@skillshare.com
 - **Status Page**: https://status.skillshare.com
 - **GitHub Issues**: https://github.com/skillshare/api/issues
+

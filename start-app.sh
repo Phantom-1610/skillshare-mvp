@@ -36,3 +36,4 @@ echo
 # Wait for user to stop
 echo "Press Ctrl+C to stop all servers"
 wait
+

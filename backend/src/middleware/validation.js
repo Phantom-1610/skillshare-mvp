@@ -170,3 +170,4 @@ export const querySchemas = {
     sort: Joi.string().valid('relevance', 'rating', 'newest', 'oldest').default('relevance')
   })
 };
+

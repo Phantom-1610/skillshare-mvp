@@ -24,3 +24,4 @@ router.post('/:matchId/accept', acceptMatch);
 router.post('/:matchId/decline', declineMatch);
 
 export default router;
+

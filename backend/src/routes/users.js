@@ -33,3 +33,4 @@ router.post('/:userId/follow', authenticateToken, followUser);
 router.delete('/:userId/follow', authenticateToken, unfollowUser);
 
 export default router;
+

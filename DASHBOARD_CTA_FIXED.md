@@ -105,3 +105,4 @@ hasAvailability = user has schedule set
 ---
 
 **All CTA buttons are now 100% functional!** 🎉
+

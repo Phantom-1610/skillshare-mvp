@@ -29,3 +29,4 @@ router.post('/resend-verification', authenticateToken, resendVerification);
 router.post('/logout', authenticateToken, logout);
 
 export default router;
+
