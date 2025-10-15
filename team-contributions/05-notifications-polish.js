@@ -1,6 +1,8 @@
 /**
  * Notifications and app polish
  * Handles real-time notifications and error handling
+ * 
+ * Developed by: Haizam
  */
 
 // ============================================================================

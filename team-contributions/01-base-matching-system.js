@@ -1,6 +1,8 @@
 /**
  * Base matching system and user authentication
  * Handles user registration, login, and finding people to connect with
+ * 
+ * Developed by: Rila
  */
 
 // User registration and login functions

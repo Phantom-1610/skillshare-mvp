@@ -1,6 +1,8 @@
 /**
  * Real-time chat system
  * Handles messaging between users with live updates
+ * 
+ * Developed by: Khan
  */
 
 // ============================================================================

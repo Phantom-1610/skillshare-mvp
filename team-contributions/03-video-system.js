@@ -1,6 +1,8 @@
 /**
  * Video calling and session management
  * Handles video calls and scheduling learning sessions
+ * 
+ * Developed by: Yoosuf
  */
 
 // ============================================================================

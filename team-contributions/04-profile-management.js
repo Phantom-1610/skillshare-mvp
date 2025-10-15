@@ -1,6 +1,8 @@
 /**
  * User profile management
  * Handles profile editing, file uploads, and skill verification
+ * 
+ * Developed by: Aashif
  */
 
 // ============================================================================

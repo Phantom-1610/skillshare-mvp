@@ -205,11 +205,11 @@ If you're still having issues:
 This project was developed by a team of 5 developers, each contributing specific features:
 
 ### **Team Contributions:**
-- **Base System & Matching** - Core authentication, user discovery, and matching algorithm
-- **Chat System** - Real-time messaging with Socket.io integration
-- **Video System** - Video calls, session scheduling, and Jitsi Meet integration
-- **Profile Management** - User profiles, file uploads, and skill verification
-- **Notifications & Polish** - Real-time notifications, error handling, and UI improvements
+- **Rila** - Base System & Matching (Core authentication, user discovery, and matching algorithm)
+- **Khan** - Chat System (Real-time messaging with Socket.io integration)
+- **Yoosuf** - Video System (Video calls, session scheduling, and Jitsi Meet integration)
+- **Aashif** - Profile Management (User profiles, file uploads, and skill verification)
+- **Haizam** - Notifications & Polish (Real-time notifications, error handling, and UI improvements)
 
 ### **For Lecturers/Assessors:**
 This repository demonstrates collaborative development with clear separation of individual contributions. Each team member's work is documented in the `team-contributions/` folder, showing their specific features and implementations.

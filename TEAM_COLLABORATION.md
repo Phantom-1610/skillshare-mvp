@@ -4,27 +4,27 @@
 
 ## 🎯 **Team Structure**
 
-### **Base Contributor (You)**
+### **Rila**
 - **Responsibility:** Core matching system and base app structure
 - **File:** `team-contributions/01-base-matching-system.js`
 - **Features:** Authentication, user discovery, matching algorithm, basic UI
 
-### **Team Member 2**
+### **Khan**
 - **Responsibility:** Chat system and real-time messaging
 - **File:** `team-contributions/02-chat-system.js`
 - **Features:** Socket.io integration, message persistence, chat UI
 
-### **Team Member 3**
+### **Yoosuf**
 - **Responsibility:** Video system and session management
 - **File:** `team-contributions/03-video-system.js`
 - **Features:** Jitsi Meet integration, session scheduling, video calls
 
-### **Team Member 4**
+### **Aashif**
 - **Responsibility:** Profile management and customization
 - **File:** `team-contributions/04-profile-management.js`
 - **Features:** Profile editing, file uploads, skill verification, reviews
 
-### **Team Member 5**
+### **Haizam**
 - **Responsibility:** Notifications and final polish
 - **File:** `team-contributions/05-notifications-polish.js`
 - **Features:** Real-time notifications, error handling, UI improvements
